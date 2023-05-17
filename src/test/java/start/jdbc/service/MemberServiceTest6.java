@@ -10,8 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import start.jdbc.domain.Member;
-import start.jdbc.repository.MemberRepository4;
-import start.jdbc.repository.MemberRepository5;
+import start.jdbc.repository.MemberRepository7;
 import start.jdbc.repository.MemberRepositoryInter;
 
 import javax.sql.DataSource;
@@ -42,13 +41,13 @@ class MemberServiceTest6 {
         }
 
         @Bean
-        MemberRepositoryInter memberRepository5() {
-            return new MemberRepository5(dataSource);
+        MemberRepositoryInter memberRepository7() {
+            return new MemberRepository7(dataSource);
         }
 
         @Bean
         MemberService6 memberService6() {
-            return new MemberService6(memberRepository5());
+            return new MemberService6(memberRepository7());
         }
 
     }
